@@ -9,7 +9,7 @@
     >Nível e Pontuação
     >Organizando ainda melhor o nosso código
 
-2. Python: avançando na linguagem
+2. Python: avançando na linguagem (Jogo da Forca)
     >Preparando o jogo da forca 
     >Manipulando strings
     >Conhecendo e trabalhando com listas
