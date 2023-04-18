@@ -4,8 +4,8 @@ Created on Mon Mar 27 17:52:47 2023
 
 @author: vanessa.oliveira
 """
-import forca
-import adivinhacao
+import Jogos.forca as forca
+import Jogos.adivinhacao as adivinhacao
 
 def escolher_jogo(): 
     print("*********************************")

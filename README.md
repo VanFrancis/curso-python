@@ -17,3 +17,11 @@
     >Implementando o encerramento do jogo
     >Escrita e leitura de arquivos
     >Melhorando o código e a apresentação
+    
+3. Python: entendendo a Orientação a Objetos
+    >O problema do paradigma procedural
+    >Classes e Objetos
+    >Implementando Métodos
+    >Encapsulamento
+    >Usando Propriedades
+    >Métodos privados e estáticos
