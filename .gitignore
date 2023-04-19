@@ -1,0 +1,10 @@
+# Editors
+.vscode/
+.idea/
+
+# Distribution / packaging
+.Python
+build/
+
+# Environments
+.env
