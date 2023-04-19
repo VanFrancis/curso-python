@@ -2,7 +2,7 @@
 class Conta: 
     
     #Construtor -> inicializa o objeto
-    def __init__(self, numero, titular, saldo, limite):
+    def __init__(self, numero, titular, saldo, limite, codigo):
         self.__numero = numero
         self.__titular = titular
         self.__saldo = saldo
@@ -44,3 +44,7 @@ class Conta:
     @limite.setter
     def limite(self, limite): 
         self.__limite = limite
+
+    @staticmethod # método estatico
+    def codigo_banco():
+        return "0001"
