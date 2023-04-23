@@ -1,48 +1,32 @@
-
-class Filme: 
-    def __init__(self, nome, ano, duracao) -> None:
-        self.__nome = nome.title()
+class Programa: 
+    def _init_(self, nome, ano) -> None:
+        self._nome = nome.title() 
         self.ano = ano
+        self._like = 0
+        
+    @property
+    def nome(self):
+        return self._nome
+    
+    @nome.setter
+    def nome(self, nome):
+        self._nome = nome.title()
+
+    @property
+    def like(self):
+        return self._like
+
+    def dar_like(self):
+        self._like += 1
+
+class Filme(Programa): 
+    def _init_(self, nome, ano, duracao) -> None:
+        super().__init__(nome,ano)
         self.duracao = duracao
-        self.__like = 0
-
-    @property
-    def nome(self):
-        return self.__nome
-    
-    @nome.setter
-    def nome(self, nome):
-        self.__nome = nome.title()
-
-    @property
-    def like(self):
-        return self.__like
-
-    def dar_like(self):
-        self.__like += 1
-
-class Serie: 
-    def __init__(self, nome, ano, temporada, ) -> None:
-        self.__nome = nome.title()
-        self.ano = ano
+class Serie(Programa): 
+    def _init_(self, nome, ano, temporada, ) -> None:
+        super().__init__(nome,ano)
         self.temporada = temporada
-        self.__like = 0
-    
-    @property
-    def nome(self):
-        return self.__nome
-    
-    @nome.setter
-    def nome(self, nome):
-        self.__nome = nome.title()
-
-    @property
-    def like(self):
-        return self.__like
-    
-    def dar_like(self):
-        self.__like += 1
-
 
 filme = Filme("vingadores", 2018, 160)
 serie = Serie("the last of us", 2023, 1)
