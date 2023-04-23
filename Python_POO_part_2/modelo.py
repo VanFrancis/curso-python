@@ -36,15 +36,41 @@ class Serie(Programa):
     def __str__(self):
         return f'Nome: {self.nome} - Temporadas: {self.temporada} - Ano: {self.ano} - Likes: {self.like}'
 
+class Plalist():
+    def __init__(self, nome, programa):
+        self.nome = nome 
+        self._programa = programa
+    
+    @property
+    def listagem(self):
+        return self._programa
+    
+    @property
+    def __len__(self):
+        return len(self._programa)
+    
+    def __getitem__(self, item):
+        return self._programa[item]
+    
+
 filme = Filme("vingadores", 2018, 160)
+filme2 = Filme("Super Mario", 2023, 120)
 serie = Serie("the last of us", 2023, 1)
+serie2 = Serie("the bear", 2022, 1)
 
 filme.dar_like()
+filme2.dar_like()
+filme2.dar_like()
+filme2.dar_like()
 serie.dar_like()
 serie.dar_like()
-serie.dar_like()
+serie2.dar_like()
+serie2.dar_like()
+serie2.dar_like()
+serie2.dar_like()
+serie2.dar_like()
 
-filmes_e_series = [filme, serie]
+filmes_e_series = [filme, serie, filme2, serie2]
 
 for programa in filmes_e_series:
     print(programa)
