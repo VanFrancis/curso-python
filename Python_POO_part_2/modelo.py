@@ -1,5 +1,5 @@
 class Programa: 
-    def _init_(self, nome, ano) -> None:
+    def __init__(self, nome, ano):
         self._nome = nome.title() 
         self.ano = ano
         self._like = 0
@@ -18,15 +18,23 @@ class Programa:
 
     def dar_like(self):
         self._like += 1
-
+        
+    def __str__(self):
+        return f'Nome: {self.nome} - Ano: {self.ano} - Likes: {self.like}'
 class Filme(Programa): 
-    def _init_(self, nome, ano, duracao) -> None:
+    def __init__(self, nome, ano, duracao):
         super().__init__(nome,ano)
         self.duracao = duracao
+        
+    def __str__(self):
+        return f'Nome: {self.nome} - Duração: {self.duracao} min - Ano: {self.ano} - Likes: {self.like}'
 class Serie(Programa): 
-    def _init_(self, nome, ano, temporada, ) -> None:
+    def __init__(self, nome, ano, temporada, ):
         super().__init__(nome,ano)
         self.temporada = temporada
+    
+    def __str__(self):
+        return f'Nome: {self.nome} - Temporadas: {self.temporada} - Ano: {self.ano} - Likes: {self.like}'
 
 filme = Filme("vingadores", 2018, 160)
 serie = Serie("the last of us", 2023, 1)
@@ -36,5 +44,7 @@ serie.dar_like()
 serie.dar_like()
 serie.dar_like()
 
-print(f'Nome: {filme.nome} - Ano: {filme.ano} - Duração: {filme.duracao} - Likes: {filme.like}')
-print(f'Nome: {serie.nome} - Ano: {serie.ano} - Duração: {serie.temporada} - Likes: {serie.like}')
+filmes_e_series = [filme, serie]
+
+for programa in filmes_e_series:
+    print(programa)
